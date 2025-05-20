@@ -156,13 +156,13 @@ const FavoritesPage: React.FC = () => {
                             }}
                             className="block h-full"
                         >
-                            <MovieCard
-                                title={movie.title}
-                                voteAverage={movie.vote_average}
-                                posterPath={movie.poster_path}
-                                releaseYear={movie.release_date ? new Date(movie.release_date).getFullYear() : 0}
-                                description={movie.overview}
-                            />
+                        <MovieCard
+                        title={movie.title}
+                        voteAverage={movie.vote_average}
+                        posterPath={movie.poster_path}
+                        description={movie.overview}
+                        />
+
                         </Link>
                         <button
                             onClick={() => handleRemoveFavorite(movie.id)}

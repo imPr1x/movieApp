@@ -106,7 +106,7 @@ const MovieDetailPage = () => {
           <h1 className="text-4xl font-bold mb-2">{movie.title}</h1>
           
           {movie.tagline && (
-            <p className="text-lg italic text-gray-500 mb-4">"{movie.tagline}"</p>
+            <p className="text-lg italic text-gray-500 mb-4">&quot;{movie.tagline}&quot;</p>
           )}
           
           <p className="text-lg mb-8">{movie.overview}</p>

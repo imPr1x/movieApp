@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Config from "@/config";
 
 interface IMovieCard {
@@ -20,10 +21,13 @@ const MovieCard: React.FC<IMovieCard> = ({
       <div className="h-full bg-white rounded-xl shadow-lg overflow-hidden flex flex-col transition-all duration-300 hover:shadow-xl">
         
         {/* Poster */}
-        <img
+        <Image
           src={poster}
           alt={title}
+          width={300}
+          height={450}
           className="w-full h-auto object-cover"
+          unoptimized 
         />
 
         {/* Content */}

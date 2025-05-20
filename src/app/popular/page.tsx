@@ -1,11 +1,12 @@
 'use client';
 import React, { useEffect, useState } from "react";
+import { IMovieDetail } from "@/types/movie";
 import { getPopularMovies } from "@/services/movies/getPopularMovies";
 import MovieList from "@/components/MovieList/MovieList";
 
 const PopularClientPage = () => {
     const [loading, setLoading] = useState(false);
-    const [movies, setMovies] = useState<any[]>([]);
+    const [movies, setMovies] = useState<IMovieDetail[]>([]);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
 
