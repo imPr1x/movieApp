@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+
 import Link from "next/link";
 import MovieCard from "@/components/MovieCard/MovieCard";
-import api from "@/services/api"; 
+
 
 interface IMovie {
     id: number;

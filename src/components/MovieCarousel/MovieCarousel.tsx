@@ -1,10 +1,9 @@
-import React, { useRef, useState, useEffect } from 'react';
+import { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { IMovieDetail } from '@/types/movie';
 import MovieCarouselItem from './MovieCarouselItem';
-import { getMovieReviewsCount } from "@/services/movies/getMovieReviewsCount";
-import Link from 'next/link';
-import Config from '@/config';
+
+
 
 export interface MovieCarouselProps {
   title: string;

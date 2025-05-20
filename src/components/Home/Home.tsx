@@ -1,11 +1,5 @@
 'use client'
-import React, { useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import api from "@/services/api";
-import MovieCard from "@/components/MovieCard/MovieCard";
-import { TrendingUp, Film, Star, ChevronLeft, ChevronRight } from "lucide-react";
-import { useGuestSession } from "@/providers/GuestSessionContext";
-import Config from "@/config";
+import { Star, TrendingUp, Film } from 'lucide-react';
 import { useMoviesData } from "@/hooks/useMoviesData";
 import MovieCarousel from "../MovieCarousel/MovieCarousel";
 

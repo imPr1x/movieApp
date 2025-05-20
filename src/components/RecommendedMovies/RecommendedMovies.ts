@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import MovieCard from "@/components/MovieCard/MovieCard";
-import Config from "@/config";
 import  api from "@/services/api";
 
 interface IMovie {
@@ -88,7 +87,6 @@ const RecommendedMovies: React.FC<IRecommendedMoviesProps> = ({ movieId }) => {
                                     title: movie.title,
                                     voteAverage: movie.vote_average,
                                     posterPath: movie.poster_path,
-                                    releaseYear: movie.release_date ? new Date(movie.release_date).getFullYear() : 0,
                                     description: movie.overview
                                 })
                             )

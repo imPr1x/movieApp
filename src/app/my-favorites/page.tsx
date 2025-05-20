@@ -2,8 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import api from "@/services/api";
-import MovieList from "@/components/MovieList/MovieList";
-import { getFavoriteMovies } from "@/services/accounts/getFavoriteMovies";
 import { useGuestSession } from "@/providers/GuestSessionContext";
 import Link from "next/link";
 import MovieCard from "@/components/MovieCard/MovieCard";
@@ -31,9 +29,6 @@ const FavoritesPage: React.FC = () => {
                 // Si no hay sesión de invitado, intentar cargar favoritos desde localStorage
                 const storedFavorites = localStorage.getItem("favoriteMovieIds");
                 if (storedFavorites) {
-                    const favoriteIds: number[] = JSON.parse(storedFavorites);
-                    // Aquí podrías hacer llamadas a la API para obtener detalles de cada película
-                    // O simplemente mostrar un mensaje informando que se requiere sesión de invitado
                     setLoading(false);
                     return;
                 }
@@ -132,7 +127,7 @@ const FavoritesPage: React.FC = () => {
             <div className="p-8">
                 <h1 className="text-4xl font-bold mb-8">Favorite Movies</h1>
                 <div className="text-center p-8 bg-gray-100 rounded-lg">
-                    <p className="text-xl mb-4">You don't have any favorite movies yet.</p>
+                    <p className="text-xl mb-4">You don&apos;t have any favorite movies yet.</p>
                     <Link href="/popular" className="text-blue-600 hover:text-blue-800 font-semibold">
                         Explore popular movies
                     </Link>
